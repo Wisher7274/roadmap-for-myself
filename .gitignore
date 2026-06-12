@@ -1,0 +1,48 @@
+# Repo-wide ignore rules (apply to all subdirectories).
+# Vue/Vite-specific rules live in rdmyself_vue/.gitignore — Git merges both automatically.
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+dist-ssr/
+*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# OS
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Editor / IDE
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+.vscode/*
+!.vscode/extensions.json
+
+# Test / coverage
+coverage/
+__screenshots__/
+
+# Cache
+*.tsbuildinfo
+.eslintcache
+*.timestamp-*-*.mjs

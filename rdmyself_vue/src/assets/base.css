@@ -38,12 +38,14 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --color-background: var(--vt-c-black);
-    --color-background-soft: var(--vt-c-black-soft);
-    --color-background-mute: var(--vt-c-black-mute);
+    /* 页面主背景：深蓝（替换原来的纯黑） */
+    --color-background: #1a2f4a;
+    /* 卡片等稍浅一层，和主背景区分开 */
+    --color-background-soft: #223d5c;
+    --color-background-mute: #2a4768;
 
-    --color-border: var(--vt-c-divider-dark-2);
-    --color-border-hover: var(--vt-c-divider-dark-1);
+    --color-border: rgba(255, 255, 255, 0.15);
+    --color-border-hover: rgba(255, 255, 255, 0.25);
 
     --color-heading: var(--vt-c-text-dark-1);
     --color-text: var(--vt-c-text-dark-2);

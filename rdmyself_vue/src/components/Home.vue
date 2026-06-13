@@ -32,7 +32,10 @@ const toggleMobile = () => {
 
     <main class="content">
       <h1 class="title">Wisher7274</h1>
-
+      <div class="hcontainer">
+        <img src="../assets/avatar.png" alt="Avatar" style="width: 120px; height: 120px; border-radius: 18%; object-fit: cover;">
+        <p style="margin-left: 1.5rem; font-size: 1.1rem; color: var(--vt-c-text-secondary);">以萤火之身祈愿，于命运之弦高歌</p>
+      </div>
       <!-- section = 页面里的一块独立区域，这里专门放「自我介绍」 -->
       <section class="intro">
         <h2 class="intro-title">自我介绍/About me</h2>
@@ -44,6 +47,7 @@ const toggleMobile = () => {
 
         <p class="intro-contact">如果你也想和我一起玩，欢迎在GitHub上找我：<a href="https://github.com/Wisher7274" target="_blank">Wisher7274</a>！</p>
       </section>
+      <p style="margin-top: 2rem; text-align: center; color: var(--vt-c-text-secondary);">（这个博客只写了个“简介”，暂时没有其他页面，敬请期待后续更新～）</p>
     </main>
 
     <footer class="footer">
@@ -157,7 +161,7 @@ const toggleMobile = () => {
 }
 .content {
   flex: 1;
-  max-width: 42rem;
+  max-width: 50rem;
   margin: 0 auto;
   text-align: left;
   padding: 2rem;
@@ -167,14 +171,21 @@ const toggleMobile = () => {
   text-align: center;
   margin-bottom: 1.5rem;
 }
-
+.hcontainer {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+  align-items: center;
+}
 /* 「自我介绍」整块：浅底 + 圆角 + 内边距，和外面背景区分开 */
 .intro {
   background: var(--color-background-soft);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1.5rem;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 10px 8px 8px rgba(0, 0, 0, 0.08);
+  border-top: 1px solid var(--color-border);
+
 }
 
 .intro-title {

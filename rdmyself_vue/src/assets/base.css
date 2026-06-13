@@ -39,10 +39,10 @@
 @media (prefers-color-scheme: dark) {
   :root {
     /* 页面主背景：深蓝（替换原来的纯黑） */
-    --color-background: #1a2f4a;
+    --color-background: #41a0d8;
     /* 卡片等稍浅一层，和主背景区分开 */
-    --color-background-soft: #223d5c;
-    --color-background-mute: #2a4768;
+    --color-background-soft: #416cad;
+    --color-background-mute: #1dc1eb;
 
     --color-border: rgba(255, 255, 255, 0.15);
     --color-border-hover: rgba(255, 255, 255, 0.25);

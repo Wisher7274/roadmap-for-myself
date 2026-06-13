@@ -18,6 +18,9 @@ Hey there~ Welcome to my little space! I'm Wisher, a fresh high school graduate 
 - Dev logs of small projects (Godot, Python, AI... whatever I feel like playing with)
 - Some thoughts on how to avoid burnout and keep learning fun
 
+> My personal blog GitHub Pages site is now set up and accessible! Though still under construction.
+[Visit here](https://wisher7274.github.io/roadmap-for-myself/)
+
 ## ✨ What I want to do
 
 - Find a learning path that actually works for me, without obsessing over tech stacks
@@ -25,6 +28,7 @@ Hey there~ Welcome to my little space! I'm Wisher, a fresh high school graduate 
 - **Practice talking to people** — even if it's just saying "hey, I think that's cool"
 
 ## 💌 Lastly
+
 I can't contribute much code yet, but I have **lots of time and tons of passion**. If you'd like to chat, tinker together, or just drop by with some kind words, I'd be super happy ❤
 
 Come visit anytime~ Let's **learn happily and live with energy** in this AI era.

@@ -16,31 +16,20 @@ import { useRoute } from 'vue-router'
 import { marked } from 'marked'
 
 const route = useRoute()
-const id = route.params.id          // 动态文章 ID
+const id = route.params.id
+const html = ref('')
+const loading = ref(true)
 
-// 用 import.meta.glob 批量获取所有 .md 文件（路径相对于当前文件）
-// key 是文件路径，value 是一个返回 Promise 的函数，调用后得到原始文本
-const modules = import.meta.glob('../assets/posts/*.md', { as: 'raw', eager: false })
-
-const html = ref('')               // 存储解析后的 HTML
-const loading = ref(true)          // 加载状态
-
-// 监听 id 变化，加载对应 Markdown 文件
 watchEffect(async () => {
-  const key = `../assets/posts/${id}.md`  // 拼接文件路径
-  const loader = modules[key]      // 取出对应的加载函数
-  if (!loader) {
-    loading.value = false
-    html.value = ''
-    return
-  }
-
+  if (!id) return
   loading.value = true
   try {
-    const raw = await loader()     // 读取原始文本
-    html.value = marked(raw)       // 解析成 HTML
+    const res = await fetch(`/posts/${id}.md`)  // 从 public 目录获取
+    if (!res.ok) throw new Error('Not found')
+    const raw = await res.text()
+    html.value = marked(raw)
   } catch (e) {
-    html.value = '<p>加载文章失败</p>'
+    html.value = '<p>文章未找到</p>'
   } finally {
     loading.value = false
   }

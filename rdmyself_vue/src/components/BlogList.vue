@@ -1,7 +1,8 @@
 <script setup>
 import { ref } from 'vue'
 const posts = ref([
-    { id: 1, title: '第一篇文章', summary: '这是第一篇文章的简介...' ,date: '2026.6.14' },
+    { id: 'another-me', title: '世界上的另一个我', summary: '呜呜呜我的绿点' ,date: '2026.6.13' },
+    { id: 'no-code-no-life', title: '全体都有，准备coding', summary: 'no code no life' ,date: '2026.6.14' },
 ])
 </script>
 

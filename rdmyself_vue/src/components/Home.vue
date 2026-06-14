@@ -20,11 +20,6 @@
 
         <p class="intro-contact">如果你也想和我一起玩，欢迎在GitHub上找我：<a href="https://github.com/Wisher7274" target="_blank">Wisher7274</a>！</p>
       </section>
-      <section>
-        <h2>我是啥子——2026.6.13</h2>
-        <p>今天推送了七八个提交，发现github的绿点完全没出来，查半天发现我本地git邮箱写的是gitee的匿名邮箱……所以就有了这行字（刷绿点）</p>
-      </section>
-      <p style="margin-top: 2rem; text-align: center; color: var(--vt-c-text-secondary);">（这个博客只写了个“简介”，暂时没有其他页面，敬请期待后续更新～）</p>
   </main>
 </template>
 

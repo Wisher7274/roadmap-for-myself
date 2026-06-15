@@ -13,8 +13,8 @@ mobileOpen.value = !mobileOpen.value
         <a class="logo" href="/">Wisher7274's blog & roadmap & ♡</a>
 
         <nav class="nav" :data-open="mobileOpen">
-          <RouterLink to="/">首页</RouterLink>
-          <RouterLink to ="/blog">博客</RouterLink>
+          <RouterLink to="/roadmap-for-myself/">首页</RouterLink>
+          <RouterLink to ="/roadmap-for-myself/blog">博客</RouterLink>
           <a href="https://github.com/Wisher7274/roadmap-for-myself" target="_blank" rel="noopener">GitHub</a>
         </nav>
 
@@ -26,8 +26,8 @@ mobileOpen.value = !mobileOpen.value
       </div>
       <div class="header-bottom" v-if="mobileOpen">
         <nav class="nav-mobile">
-          <RouterLink to="/">首页</RouterLink>
-          <RouterLink to ="/blog">博客</RouterLink>
+          <RouterLink to="/roadmap-for-myself">首页</RouterLink>
+          <RouterLink to ="/roadmap-for-myself/blog">博客</RouterLink>
           <a href="https://github.com/Wisher7274/roadmap-for-myself" target="_blank" rel="noopener">GitHub</a>
         </nav>
       </div>

@@ -4,8 +4,9 @@
       <!-- 标题和日期可以用路由参数，但更推荐从 Markdown 里分离，这里先用简单方式 -->
       <h1>文章 #{{ id }}</h1>
       <!-- v-html 渲染 Markdown 生成的 HTML -->
+      <p v-if="loading">加载中</p>
       <div class="markdown-body" v-html="html"></div>
-      <p class="back"><RouterLink to="/blog">← 返回列表</RouterLink></p>
+      <p class="back"><RouterLink to="/roadmap-for-myself/blog">← 返回列表</RouterLink></p>
     </article>
   </main>
 </template>

@@ -15,7 +15,7 @@ const posts = ref([
             </section>
             <div>
                 <article v-for="post in posts" :key="post.id" class="card">
-                <h2><RouterLink :to ="`/blog/${post.id}`">{{ post.title }}</RouterLink></h2>
+                <h2><RouterLink :to ="`/roadmap-for-myself/blog/${post.id}`">{{ post.title }}</RouterLink></h2>
                 <time>{{ post.date }}</time>
                 <p>{{ post.summary }}</p>
                 </article>

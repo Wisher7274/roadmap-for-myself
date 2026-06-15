@@ -20,7 +20,7 @@ Hi~ 欢迎来到我的Github仓库！我是Wisher7274，一名刚高考完的毕
 
 > 本仓库会收录多个学习探索项目，其中rdmyself作为与本仓库相关联的个人博客，相关笔记会被记录在其中。
 > 现在我已经搭建好个人博客的Github pages页面，正在施工，但已经可以访问啦！
-[点这里](https://wisher7274.github.io/)
+[点这里](https://wisher7274.github.io/roadmap-for-myself)
 
 ## 我想做的
 

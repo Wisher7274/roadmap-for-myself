@@ -20,7 +20,7 @@ Hey there~ Welcome to my little space! I'm Wisher, a fresh high school graduate 
 
 > This repository will host multiple learning and exploration projects. Among them, rdmyself serves as the personal blog associated with this repository, where relevant notes will be documented.
 > My personal blog GitHub Pages site is now set up and accessible! Though still under construction.
-[Visit here](https://wisher7274.github.io)
+[Visit here](https://wisher7274.github.io/roadmap-for-myself)
 
 ## What I want to do
 

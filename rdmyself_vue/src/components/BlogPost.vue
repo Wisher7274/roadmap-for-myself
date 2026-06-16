@@ -25,7 +25,7 @@ watchEffect(async () => {
   if (!id) return
   loading.value = true
   try {
-    const res = await fetch(`/posts/${id}.md`)  // 从 public 目录获取
+    const res = await fetch(`${import.meta.env.BASE_URL}posts/${id}.md`)  // 从 public 目录获取
     if (!res.ok) throw new Error('Not found')
     const raw = await res.text()
     html.value = marked(raw)

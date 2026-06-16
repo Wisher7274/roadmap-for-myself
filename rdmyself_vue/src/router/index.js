@@ -4,7 +4,6 @@ import BlogList from '../components/BlogList.vue'
 import BlogPost from '../components/BlogPost.vue'
 
 const routes = [
-  { path: '/', name: 'home-root', component: Home },
   { path: '/roadmap-for-myself', name: 'home', component: Home },
   { path: '/roadmap-for-myself/blog', name: 'blog-list', component: BlogList },
   { path: '/roadmap-for-myself/blog/:id', name: 'blog-post', component: BlogPost },

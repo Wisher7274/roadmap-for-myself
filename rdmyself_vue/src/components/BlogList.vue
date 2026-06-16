@@ -3,6 +3,7 @@ import { ref } from 'vue'
 const posts = ref([
     { id: 'another-me', title: '世界上的另一个我', summary: '呜呜呜我的绿点' ,date: '2026.6.13' },
     { id: 'no-code-no-life', title: '全体都有，准备coding', summary: 'no code no life' ,date: '2026.6.14' },
+    { id: 'rust-yes', title: '文档还得是看英文的', summary: 'rust好啊' ,date: '2026.6.16' },
 ])
 </script>
 

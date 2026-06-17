@@ -1,163 +1,68 @@
 <script setup>
 import { ref } from 'vue'
-import router from './router';
 const mobileOpen = ref(false)
 const toggleMobile = () => {
 mobileOpen.value = !mobileOpen.value
 }
 </script>
-<template>
-  <div class="page">
-    <header class="header">
-      <div class="header-inner">
-        <a class="logo" href="/">Wisher7274's blog & roadmap & ♡</a>
 
-        <nav class="nav" :data-open="mobileOpen">
-          <RouterLink to="/roadmap-for-myself/">首页</RouterLink>
-          <RouterLink to ="/roadmap-for-myself/blog">博客</RouterLink>
-          <a href="https://github.com/Wisher7274/roadmap-for-myself" target="_blank" rel="noopener">GitHub</a>
+<template>
+  <div class="min-h-screen flex flex-col bg-gray-50">
+    <!-- Header -->
+    <header class="sticky top-0 z-40 bg-gray-900 text-white shadow-lg">
+      <div class="mx-auto px-4 py-3 flex items-center justify-center">
+        <!-- 桌面导航 -->
+        <nav class="hidden md:flex items-center gap-6 text-sm">
+          <RouterLink to="/roadmap-for-myself/" class="hover:text-blue-300 transition">首页</RouterLink>
+          <RouterLink to="/roadmap-for-myself/blog" class="hover:text-blue-300 transition">博客</RouterLink>
+          <a
+            href="https://github.com/Wisher7274/roadmap-for-myself"
+            target="_blank"
+            rel="noopener"
+            class="hover:text-blue-300 transition"
+          >GitHub</a>
         </nav>
 
-        <button class="menu-btn" @click="toggleMobile" aria-label="menu">
-          <span class="bar"></span>
-          <span class="bar"></span>
-          <span class="bar"></span>
+        <!-- 移动端菜单按钮 -->
+        <button
+          class="md:hidden p-2 rounded hover:bg-gray-700 focus:outline-none"
+          @click="toggleMobile"
+          aria-label="菜单"
+        >
+          <span class="block w-5 h-0.5 bg-white mb-1"></span>
+          <span class="block w-5 h-0.5 bg-white mb-1"></span>
+          <span class="block w-5 h-0.5 bg-white"></span>
         </button>
       </div>
-      <div class="header-bottom" v-if="mobileOpen">
-        <nav class="nav-mobile">
-          <RouterLink to="/roadmap-for-myself">首页</RouterLink>
-          <RouterLink to ="/roadmap-for-myself/blog">博客</RouterLink>
-          <a href="https://github.com/Wisher7274/roadmap-for-myself" target="_blank" rel="noopener">GitHub</a>
+
+      <!-- 移动端下拉菜单 -->
+      <div v-if="mobileOpen" class="md:hidden bg-gray-800 px-4 py-3">
+        <nav class="flex flex-col gap-2 text-sm">
+          <RouterLink to="/roadmap-for-myself/" class="hover:text-blue-300 transition" @click="mobileOpen = false">首页</RouterLink>
+          <RouterLink to="/roadmap-for-myself/blog" class="hover:text-blue-300 transition" @click="mobileOpen = false">博客</RouterLink>
+          <a
+            href="https://github.com/Wisher7274/roadmap-for-myself"
+            target="_blank"
+            rel="noopener"
+            class="hover:text-blue-300 transition"
+          >GitHub</a>
         </nav>
       </div>
     </header>
 
-    <router-view />
+    <!-- 主内容 -->
+    <main class="flex-1 dark:bg-gray-950">
+      <RouterView />
+    </main>
 
-    <footer class="footer">
-      <span>&copy; 2026 Jacob Lee. All rights reserved.</span>
-      <p>Made by Wisher7274 with 💗</p>
+    <!-- Footer -->
+    <footer class="bg-gray-800 text-gray-400 text-sm py-6 text-center">
+      <p>&copy; 2026 Jacob Lee. All rights reserved.</p>
+      <p class="mt-1">Made by Wisher7274 with 💗</p>
     </footer>
   </div>
 </template>
 
 <style>
-.page {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-.content {
-  flex: 1;
-  max-width: 50rem;
-  margin: 0 auto;
-  text-align: left;
-  padding: 2rem;
-}
-.header {
-  position: sticky;
-  top: 0;
-  z-index: 40;
-  /* 渐变 + 轻微毛玻璃效果 */
-  background: linear-gradient(90deg, rgba(34,34,34,0.95), rgba(48,48,48,0.9));
-  color: var(--vt-c-white);
-  padding: 0.5rem 1rem;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
-  box-shadow: 0 4px 18px rgba(2,6,23,0.35);
-}
 
-.header-inner {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  max-width: 1100px;
-  margin: 0 auto;
-}
-
-.logo {
-  font-weight: 700;
-  color: var(--vt-c-white);
-  text-decoration: none;
-  font-size: 1.05rem;
-  padding: 0.25rem 0.5rem;
-}
-
-.nav {
-  margin-left: auto;
-  display: flex;
-  gap: 0.75rem;
-  align-items: center;
-}
-
-.nav a {
-  color: var(--vt-c-white);
-  text-decoration: none;
-  padding: 0.45rem 0.6rem;
-  border-radius: 6px;
-  transition: background-color 0.18s, transform 0.12s;
-}
-
-.nav a:hover {
-  background: rgba(255,255,255,0.06);
-  transform: translateY(-1px);
-}
-
-.menu-btn {
-  display: none;
-  background: transparent;
-  border: none;
-  margin-left: 0.5rem;
-  padding: 0.3rem;
-  cursor: pointer;
-}
-
-.menu-btn .bar {
-  display: block;
-  width: 20px;
-  height: 2px;
-  background: var(--vt-c-white);
-  margin: 3px 0;
-  border-radius: 2px;
-}
-
-.header-bottom {
-  background: linear-gradient(180deg, rgba(0,0,0,0.03), transparent);
-  padding: 0.5rem 1rem 0.75rem;
-}
-
-.nav-mobile {
-  display: flex;
-  flex-direction: column;
-  gap: 0.35rem;
-  max-width: 1100px;
-  margin: 0.25rem auto 0;
-}
-
-.nav-mobile a {
-  padding: 0.5rem 0.75rem;
-  border-radius: 6px;
-  color: var(--vt-c-white);
-  text-decoration: none;
-  background: rgba(255,255,255,0.02);
-}
-
-@media (max-width: 720px) {
-  .nav { display: none; }
-  .menu-btn { display: inline-block; }
-}
-
-@media (min-width: 721px) {
-  .header-bottom { display: none; }
-}
-.footer {
-  background-color: #333;
-  color: #fff;
-  /* 上下 + 左右留白，文字不贴底栏边缘 */
-  padding: 1rem 1.5rem;
-  text-align: center;
-  font-size: 0.875rem;
-  opacity: 0.8;
-}
 </style>

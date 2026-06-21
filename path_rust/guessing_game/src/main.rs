@@ -32,6 +32,7 @@ fn get_input_num() -> i32 {
 fn cmp_and_rty(gue: i32 , tar: i32) -> bool {
     match gue.cmp(&tar) {
         Ordering::Less => { println!("less! zako~zako~");true },
+        Ordering::Less => { println!("zako~zako~");true },
         Ordering::Greater => { println!("greater zako~zako~");true },
         Ordering::Equal => { println!("good job!");false },
     }

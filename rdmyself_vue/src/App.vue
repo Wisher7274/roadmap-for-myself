@@ -1,5 +1,6 @@
 <script setup>
 import { ref } from 'vue'
+import ParticleBackground from './components/effects/ParticleBackground.vue'
 const mobileOpen = ref(false)
 const toggleMobile = () => {
 mobileOpen.value = !mobileOpen.value
@@ -13,13 +14,13 @@ mobileOpen.value = !mobileOpen.value
       <div class="mx-auto px-4 py-3 flex items-center justify-center">
         <!-- 桌面导航 -->
         <nav class="hidden md:flex items-center gap-6 text-sm">
-          <RouterLink to="/roadmap-for-myself/" class="hover:text-blue-300 transition">首页</RouterLink>
-          <RouterLink to="/roadmap-for-myself/blog" class="hover:text-blue-300 transition">博客</RouterLink>
+          <RouterLink to="/roadmap-for-myself/" class="hover:text-blue-300 transition text-lg">首页</RouterLink>
+          <RouterLink to="/roadmap-for-myself/blog" class="hover:text-blue-300 transition text-lg">博客</RouterLink>
           <a
             href="https://github.com/Wisher7274/roadmap-for-myself"
             target="_blank"
             rel="noopener"
-            class="hover:text-blue-300 transition"
+            class="hover:text-blue-300 transition text-lg"
           >GitHub</a>
         </nav>
 
@@ -52,11 +53,12 @@ mobileOpen.value = !mobileOpen.value
 
     <!-- 主内容 -->
     <main class="flex-1 dark:bg-gray-950">
-      <RouterView />
+      <ParticleBackground />
+      <RouterView class="z-10"/>
     </main>
 
     <!-- Footer -->
-    <footer class="bg-gray-800 text-gray-400 text-sm py-6 text-center">
+    <footer class="bg-gray-800 text-gray-400 text-sm py-6 text-center z-20">
       <p>&copy; 2026 Jacob Lee. All rights reserved.</p>
       <p class="mt-1">Made by Wisher7274 with 💗</p>
     </footer>
